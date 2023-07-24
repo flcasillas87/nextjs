@@ -1,21 +1,20 @@
-import './globals.css';
-import Link from "next/link";
-import Navigation from '@/components/layout/Navbar';
-import Tabla from '@/components/shared/Table';
-import Boton from '@/components/shared/Boton';
-
-import {useFirestoreDocData, useAuth } from 'reactfire'
+import './globals.css'
+import Navigation from '@/components/layout/Navbar'
+//import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import Header from '@/components/layout/Header'
 
 export default function RootLayout({ children }) {
   return (
     <html>
       <head>
+        <Header />
         <title>SREN</title>
       </head>
       <body>
         <Navigation />
-        <Tabla />
-        <Boton />
+        
+        <Footer />
         {children}
       </body>
     </html>

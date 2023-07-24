@@ -1,52 +1,78 @@
-[debug] [2023-07-24T04:49:16.151Z] ----------------------------------------------------------------------
-[debug] [2023-07-24T04:49:16.152Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\flcas\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
-[debug] [2023-07-24T04:49:16.152Z] CLI Version:   12.4.5
-[debug] [2023-07-24T04:49:16.153Z] Platform:      win32
-[debug] [2023-07-24T04:49:16.153Z] Node Version:  v18.17.0
-[debug] [2023-07-24T04:49:16.154Z] Time:          Sun Jul 23 2023 22:49:16 GMT-0600 (hora estándar central)
-[debug] [2023-07-24T04:49:16.154Z] ----------------------------------------------------------------------
+[debug] [2023-07-24T05:00:45.998Z] ----------------------------------------------------------------------
+[debug] [2023-07-24T05:00:46.000Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\flcas\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-07-24T05:00:46.000Z] CLI Version:   12.4.5
+[debug] [2023-07-24T05:00:46.000Z] Platform:      win32
+[debug] [2023-07-24T05:00:46.001Z] Node Version:  v18.17.0
+[debug] [2023-07-24T05:00:46.001Z] Time:          Sun Jul 23 2023 23:00:46 GMT-0600 (hora estándar central)
+[debug] [2023-07-24T05:00:46.001Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-07-24T04:49:16.159Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-07-24T04:49:16.159Z] > authorizing via signed-in user (flcasillas@gmail.com)
+[debug] [2023-07-24T05:00:46.070Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-24T05:00:46.071Z] > authorizing via signed-in user (flcasillas@gmail.com)
+[debug] [2023-07-24T05:00:46.071Z] [iam] checking project sren-26321 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-24T05:00:46.073Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sren-26321:testIamPermissions [none]
+[debug] [2023-07-24T05:00:46.073Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sren-26321:testIamPermissions x-goog-quota-user=projects/sren-26321
+[debug] [2023-07-24T05:00:46.073Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sren-26321:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-24T05:00:46.410Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sren-26321:testIamPermissions 200
+[debug] [2023-07-24T05:00:46.410Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sren-26321:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-24T05:00:46.411Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sren-26321 [none]
+[debug] [2023-07-24T05:00:46.665Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sren-26321 200
+[debug] [2023-07-24T05:00:46.665Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sren-26321 {"projectId":"sren-26321","projectNumber":"934110277189","displayName":"SREN","name":"projects/sren-26321","resources":{"hostingSite":"sren-26321","realtimeDatabaseInstance":"sren-26321-default-rtdb"},"state":"ACTIVE","etag":"1_dd59a26a-ca10-495b-b689-99c56b958d86"}
+[debug] [2023-07-24T05:00:50.797Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/sren-26321/sites pageToken=&pageSize=10
+[debug] [2023-07-24T05:00:51.236Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/sren-26321/sites 200
+[debug] [2023-07-24T05:00:51.236Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/sren-26321/sites {"sites":[{"name":"projects/sren-26321/sites/sren-26321","defaultUrl":"https://sren-26321.web.app","appId":"1:934110277189:web:12ba6b99a608953885bd2c","type":"DEFAULT_SITE"}]}
+[debug] [2023-07-24T05:00:51.236Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:934110277189:web:12ba6b99a608953885bd2c/config [none]
+[debug] [2023-07-24T05:00:51.584Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:934110277189:web:12ba6b99a608953885bd2c/config 200
+[debug] [2023-07-24T05:00:51.585Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:934110277189:web:12ba6b99a608953885bd2c/config {"projectId":"sren-26321","appId":"1:934110277189:web:12ba6b99a608953885bd2c","databaseURL":"https://sren-26321-default-rtdb.firebaseio.com","storageBucket":"sren-26321.appspot.com","apiKey":"AIzaSyBUHttGYbkgyNky2RhSjlhrIoe2Srf0PVA","authDomain":"sren-26321.firebaseapp.com","messagingSenderId":"934110277189","measurementId":"G-H6ESY9PTS6"}
 [info] 
-     ######## #### ########  ######## ########     ###     ######  ########
-     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
-     ######    ##  ########  ######   ########  #########  ######  ######
-     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
-     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
 
-You're about to initialize a Firebase project in this directory:
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
 
-  D:\GitHub\nextjs
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] - info Creating an optimized production build...
+
+[info] Failed to compile.
+
+
+[info] ./app/signup/page.tsx
+Module not found: Package path ./auth/signup is not exported from package D:\GitHub\nextjs\node_modules\firebase (see exports field in D:\GitHub\nextjs\node_modules\firebase\package.json)
+
+https://nextjs.org/docs/messages/module-not-found
+
+./app/conexion/page.tsx
+Module not found: Can't resolve '../firebaseConfig'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./node_modules/reactfire/dist/index.js
+Attempted import error: 'createContext' is not exported from 'react' (imported as 'f').
+
+Import trace for requested module:
+./node_modules/reactfire/dist/index.js
+./app/Pruebas/page.tsx
+
+./node_modules/reactfire/dist/index.js
+Attempted import error: 'createContext' is not exported from 'react' (imported as 'f').
+
+Import trace for requested module:
+./node_modules/reactfire/dist/index.js
+./app/Pruebas/page.tsx
+
+./node_modules/reactfire/dist/index.js
+Attempted import error: 'useReducer' is not exported from 'react' (imported as 'f').
+
+Import trace for requested module:
+./node_modules/reactfire/dist/index.js
+./app/Pruebas/page.tsx
+
 
 [info] 
-=== Project Setup
-[info] 
-[info] First, let's associate this project directory with a Firebase project.
-[info] You can create multiple project aliases by running firebase use --add, 
-[info] but for now we'll just set up a default project.
-[info] 
-[debug] [2023-07-24T04:49:54.890Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
-[debug] [2023-07-24T04:49:55.265Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
-[debug] [2023-07-24T04:49:55.265Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
-[info] i  Using project sren-26321 (SREN) 
-[info] 
-=== Hosting Setup
-[info] 
-[info] i  Detected a .git folder at D:\GitHub\nextjs 
-[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
-[info] 
-[info] Visit this URL on this device to log in:
-[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=53813707&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
-[info] 
-[info] Waiting for authentication...
-[debug] [2023-07-24T04:50:44.296Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
-[debug] [2023-07-24T04:50:44.296Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
-[debug] [2023-07-24T04:50:44.597Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
-[debug] [2023-07-24T04:50:44.597Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
-[debug] [2023-07-24T04:50:44.601Z] >>> [apiv2][query] GET https://api.github.com/user [none]
-[debug] [2023-07-24T04:50:44.878Z] <<< [apiv2][status] GET https://api.github.com/user 200
-[debug] [2023-07-24T04:50:44.878Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"flcasillas87","id":39224573,"node_id":"MDQ6VXNlcjM5MjI0NTcz","avatar_url":"https://avatars.githubusercontent.com/u/39224573?v=4","gravatar_id":"","url":"https://api.github.com/users/flcasillas87","html_url":"https://github.com/flcasillas87","followers_url":"https://api.github.com/users/flcasillas87/followers","following_url":"https://api.github.com/users/flcasillas87/following{/other_user}","gists_url":"https://api.github.com/users/flcasillas87/gists{/gist_id}","starred_url":"https://api.github.com/users/flcasillas87/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/flcasillas87/subscriptions","organizations_url":"https://api.github.com/users/flcasillas87/orgs","repos_url":"https://api.github.com/users/flcasillas87/repos","events_url":"https://api.github.com/users/flcasillas87/events{/privacy}","received_events_url":"https://api.github.com/users/flcasillas87/received_events","type":"User","site_admin":false,"name":"Fernando Lopez Casillas","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":5,"public_gists":0,"followers":0,"following":0,"created_at":"2018-05-12T19:41:47Z","updated_at":"2023-07-22T03:34:16Z","private_gists":1,"total_private_repos":2,"owned_private_repos":2,"disk_usage":3111,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
-[info] 
-[info] +  Success! Logged into GitHub as flcasillas87 
-[info] 
+> Build failed because of webpack errors
+
+[debug] [2023-07-24T05:01:13.309Z] Error: ENOENT: no such file or directory, open 'D:\GitHub\nextjs\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.

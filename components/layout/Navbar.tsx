@@ -5,40 +5,22 @@ import Link from 'next/link';
 import UserContext from '@/lib/UserContext';
 import Router from 'next/router';
 
-import Cookies from 'js-cookie';
-import { useContext } from 'react';
-
-const links = [
-  {
-    label: "Home",
-    route: "/",
-  },
-  {
-    label: "componente",
-    route: "./about",
-  },
-  {
-    label: "React",
-    route:"./Pruebas",
-  },
-  {
-    label: "Firestore",
-    route:"./Firestore",
-  },
-];
+import Cookies from 'js-cookie'
+import { useContext } from 'react'
+import {routes} from '@/data/routes'
 
 export default function Navigation() {
   return (
     <header>
-      <nav>
+      <Nav className='justify-content-md-center'>
         <ul>
-          {links.map(({ label, route }) => (
+          {routes.map(({ label, route }) => (
             <li key={route}>
               <Link href={route}>{label}</Link>
             </li>
           ))}
         </ul>
-      </nav>
+      </Nav>
      </header>
   )
 }
