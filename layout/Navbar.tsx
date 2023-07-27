@@ -2,7 +2,7 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav'
 import Link from 'next/link';
-import UserContext from '@/lib/UserContext';
+import UserContext from '@/app/modules/UserContext';
 import Router from 'next/router';
 
 import Cookies from 'js-cookie'
