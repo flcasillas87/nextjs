@@ -1,9 +1,11 @@
-import Sidebar from '@/layout/sidebar'
 import './globals.css'
+import Section from '@/layout/section'
 //import Navigation from '@/components/layout/Navbar'
 //import Header from '@/components/layout/Header'
 import AppFooter from '@/layout/AppFooter'
+import Drawer from '@/layout/AppDrawer'
 //import Header from '@/components/layout/Header'
+
 
 export default function RootLayout({
   children,
@@ -13,7 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Sidebar />
         {children}
         <AppFooter />
       </body>
