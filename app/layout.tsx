@@ -1,22 +1,19 @@
 import './globals.css'
-import Navigation from '@/components/layout/Navbar'
+//import Navigation from '@/components/layout/Navbar'
 //import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
-import Header from '@/components/layout/Header'
+import AppFooter from '@/layout/AppFooter'
+//import Header from '@/components/layout/Header'
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html>
-      <head>
-        <Header />
-        <title>SREN</title>
-      </head>
-      <body>
-        <Navigation />
-        
-        <Footer />
-        {children}
+    <html lang="en">
+      <body>{children}
+      <AppFooter />
       </body>
     </html>
-  );
+  )
 }
